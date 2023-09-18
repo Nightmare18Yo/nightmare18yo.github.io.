@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChessWatch</title>
+  <style>
+    body {
+      font-family: "comic sans MS", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px;
+      border: 5px solid #333;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    h4 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .videos {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .videos iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Chess Videos</h1>
+
+  <div class="container">
+    <img src="data:image/png;base64,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" alt="Chess Image">
+
+    <h4>ChessVideo</h4>
+
+    <div class="videos" id="videos">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ej_fnsdsksA?si=k4uZ1Tbl6HHGBALv" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1>Tutorial 1</h1>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/S5GIpAM-aWQ?si=TlUQ1VtXMLr6D0H3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1>Tutorial 2</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OCSbzArwB10?si=6z9d9OwcVa2Zp8r-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   <h1>Tutorial 3</h1>
+    </div>
+  </div>
+<h3>Made by Nightmare18Yo</h3>
+  <script>
+    // Call the function directly to show videos
+    showVideos()
+  </script>
+</body>
+</html>
